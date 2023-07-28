@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="module">
+import speakToURL from './speaker.mjs';
+document.getElementById('generate').addEventListener('click', (e) => {
+	console.log('Generating');
+	const message = prompt();
+	const voice = document.getElementById('voice').value;
+	const url = speakToURL(message, voice);
+	document.getElementById('out').innerHTML = `<a href="${url}">Test WAV</a><br />`;
+});
+</script>
+</head>
+<body>
+<button id="generate">Generate</button><br />
+<select id="voice">
+	<option value="rms">Richard</option>
+	<option value="slt">Sally</option>
+	<option value="awb">Albus</option>
+	<option value="kal">Kal</option>
+</select>
+<div id='out'></div>
+</script>
+</body>
+</html>

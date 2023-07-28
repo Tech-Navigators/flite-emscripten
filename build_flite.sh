@@ -15,5 +15,5 @@ emconfigure ./configure --host=wasm32-wasi
 emmake make clean
 emmake make
 
-cp bin/flite ~/test/flite.mjs
-cp bin/flite.wasm ~/test
+cp bin/flite example/flite.mjs
+cp bin/flite.wasm example
